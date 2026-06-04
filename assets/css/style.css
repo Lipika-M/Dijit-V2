@@ -16131,6 +16131,7 @@ body{
   /* ===================================
      BOTTOM NAVBAR
   =================================== */
+.modern-home.saas-2025 .bottom-navbar-mobile.section,
 .bottom-navbar-mobile{
 
   margin:0 !important;
@@ -18496,21 +18497,27 @@ body{
 }
 
 @media only screen and (max-width: 767px) {
-  .modern-home.saas-2025 .why-dijit-image,
-  .modern-home.saas-2025 .modern-image-wrapper {
+  .modern-home.saas-2025 .why-dijit-section .why-dijit-image,
+  .modern-home.saas-2025 .why-dijit-section .modern-image-wrapper {
     display: flex !important;
     justify-content: center !important;
+    align-items: center !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
-  .modern-home.saas-2025 .why-dijit-image .floating-card-img,
-  .modern-home.saas-2025 .modern-image-wrapper .floating-card-img {
+  .modern-home.saas-2025 .why-dijit-section .why-dijit-image .floating-card-img,
+  .modern-home.saas-2025 .why-dijit-section .modern-image-wrapper .floating-card-img,
+  .modern-home.saas-2025 .why-dijit-section .why-dijit-image .modern-card-img,
+  .modern-home.saas-2025 .why-dijit-section .modern-image-wrapper .modern-card-img {
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: 100% !important;
+    width: 100% !important;
     height: auto !important;
   }
 }
@@ -18790,6 +18797,7 @@ body{
      BOTTOM NAVBAR
   ===================================================== */
 
+  .modern-home.saas-2025 .bottom-navbar-mobile.section,
   .bottom-navbar-mobile{
 
     position:fixed !important;
@@ -18800,11 +18808,12 @@ body{
     width:100% !important;
     height:64px !important;
 
-    background:#111827 !important;
+    margin:0 !important;
+    padding:0 !important;
 
-    border-top:1px solid rgba(255,255,255,0.06) !important;
+    background:#ffffff !important;
 
-    
+    border-top:1px solid #e5e7eb !important;
 
     z-index:99999 !important;
   }

@@ -1593,24 +1593,30 @@
    GLOBAL SECTION SPACING OVERRIDES (HOME PAGE)
    ========================================================================== */
 
-/* Reduce the default large padding between sections */
-.modern-home.saas-2025 .section:not(.hero-section) {
+/* Reduce the default large padding between sections (exclude fixed bottom nav) */
+.modern-home.saas-2025 .section:not(.hero-section):not(.bottom-navbar-mobile) {
     padding-top: 65px !important;
     padding-bottom: 65px !important;
 }
 
 @media (max-width: 991px) {
-    .modern-home.saas-2025 .section:not(.hero-section) {
+    .modern-home.saas-2025 .section:not(.hero-section):not(.bottom-navbar-mobile) {
         padding-top: 55px !important;
         padding-bottom: 55px !important;
     }
 }
 
 @media (max-width: 767px) {
-    .modern-home.saas-2025 .section:not(.hero-section) {
+    .modern-home.saas-2025 .section:not(.hero-section):not(.bottom-navbar-mobile) {
         padding-top: 45px !important;
         padding-bottom: 45px !important;
     }
+}
+
+.modern-home.saas-2025 .bottom-navbar-mobile.section {
+    padding: 0 !important;
+    margin: 0 !important;
+    float: none !important;
 }
 
 /* ==========================================================================
@@ -1665,6 +1671,104 @@ span.sub-title.modern-subtitle:hover {
     padding: 0;
 }
 @media (max-width: 767px) {
+    /* Why DIJIT — End-to-End Recruitment section (mobile only) */
+    .modern-home.saas-2025 .why-dijit-section.section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .why-dijit-section .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .why-dijit-section .why-dijit-main-card {
+        padding: 24px 18px !important;
+        border-radius: 20px !important;
+    }
+
+    .why-dijit-section .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .why-dijit-section .row > [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .why-dijit-section .why-dijit-content,
+    .why-dijit-section .why-dijit-content.modern-content {
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+        width: 100%;
+        text-align: left;
+    }
+
+    .why-dijit-section .why-dijit-content .section-title {
+        margin-bottom: 16px !important;
+        text-align: left;
+    }
+
+    .why-dijit-section .why-dijit-content .section-title .modern-subtitle {
+        display: inline-block !important;
+        margin-bottom: 0;
+    }
+
+    .why-dijit-section .why-dijit-content .lead {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 24px !important;
+        text-align: left;
+    }
+
+    .why-dijit-section .dijit-check-list,
+    .why-dijit-section .dijit-check-list.modern-check-list {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        width: 100%;
+    }
+
+    .why-dijit-section .dijit-check-list li {
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+
+    .why-dijit-section .dijit-check-list li span {
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+        text-align: left;
+    }
+
+    .why-dijit-section .why-dijit-image,
+    .why-dijit-section .modern-image-wrapper {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 28px auto 0 !important;
+        padding: 0 !important;
+    }
+
+    .why-dijit-section .why-dijit-image img,
+    .why-dijit-section .modern-image-wrapper .modern-card-img,
+    .why-dijit-section .modern-card-img {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+        animation: none !important;
+        transform: none !important;
+    }
+
     .modern-check-list {
         grid-template-columns: 1fr;
         gap: 14px 0;
@@ -1693,6 +1797,7 @@ span.sub-title.modern-subtitle:hover {
         background: none !important;
         -webkit-background-clip: initial !important;
         background-clip: initial !important;
+        text-align: left !important;
     }
 
     .why-dijit-content .lead {
